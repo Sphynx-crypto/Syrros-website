@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Sora:wght@600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes pulseDot {
+    0%   { box-shadow: 0 0 0 6px rgba(59,130,246,0.12), 0 0 22px rgba(124,77,255,0.55); }
+    50%  { box-shadow: 0 0 0 9px rgba(59,130,246,0.18), 0 0 30px rgba(124,77,255,0.75); }
+    100% { box-shadow: 0 0 0 6px rgba(59,130,246,0.12), 0 0 22px rgba(124,77,255,0.55); }
+  }
+  .animate-pulseDot { animation: pulseDot 2.2s infinite; }
+}
+
+.glow-border-btn {
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  display: inline-flex;  
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 500;
+  background-color: #4682B4; /* Steel blue */
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.glow-border-btn::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+  z-index: -1;
+  border-radius: 0.75rem;
+  animation: glow-rotate 3s linear infinite;
+  filter: blur(4px);
+  background-size: 300% 300%;
+}
+@keyframes glow-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  .glow-border-btn:hover {
+  background-color: #5a9bd5; /* teinte plus claire de steel blue */
+}
+
+}
+.home-background {
+  min-height: 100%;
+  background: #202124
+}
+.products-background {
+  min-height: 100%;
+  background: linear-gradient(to bottom, steelblue 0%, #111827 75%, #111827 100%);
+}
+
+.wavy-line {
+  position: relative;
+  height: 2px;
+  background-color: #3b82f6;
+  overflow: hidden;
+}
+
+.wavy-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  height: 4px;
+  width: 50%;
+  background: linear-gradient(to right, transparent, #93c5fd, transparent);
+  animation: scan 2s infinite linear;
+  opacity: 0.8;
+}
+
+@keyframes scan {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-animated-gradient {
+  background: linear-gradient(-45deg, #0f0f0f,       /* noir profond */
+    #1e293b,       /* bleu nuit très foncé */
+    #2c3e50,       /* bleu fumé foncé */
+    #4682b4,       /* steel blue */
+    #2c3e50,       /* retour au bleu fumé */
+    #1e293b,       /* retour bleu nuit */
+    #0f0f0f        /* retour noir */);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+}
+@keyframes pulse-lines {
+  0% {
+    stroke-opacity: 0.1;
+  }
+  50% {
+    stroke-opacity: 0.6;
+  }
+  100% {
+    stroke-opacity: 0.1;
+  }
+}
+
+.animate-pulse path {
+  animation: pulse-lines 2s ease-in-out infinite;
+}
+.bg-circuit-board {
+  background-image: url('/assets/backgrounds/circuit-board.svg');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@keyframes pulseUp {
+  0% {
+    stroke-dashoffset: 1400;
+    stroke: rgba(51, 156, 255, 0.3); 
+  }
+  50% {
+    stroke: rgba(51, 156, 255, 1); 
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke: rgba(51, 156, 255, 0.8);
+  }}
+.animate-glow path {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: pulseUp 6s ease-out forwards;
+}
+.articles-background {
+  min-height: 100%;
+  background: linear-gradient(to bottom, #111827, #1E3A8A, #111827);
+  background-size: 100% 200%;
+  animation: gradientMove 30s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.bg-gradient-radial {
+  background: radial-gradient(circle, rgba(59,130,246,0.3) 0%, transparent 70%);
+}
+/* Cache les éléments par défaut */
+.fade-target {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Classe appliquée lors de l'apparition */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+body {
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1a1a1a;
+  background-color: #ffffff;
+}
+
+/* === Section Agence === */
+.agency-section {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.agency-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Titre = Sora */
+.agency-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 2.2rem;
+  color: #1e2a38;
+  margin-bottom: 10px;
+}
+
+/* Texte = Manrope */
+.agency-mission {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.agency-points p {
+  font-size: 1rem;
+  color: #444;
+  margin: 5px 0;
+}
+
+/* === Section Process === */
+.process-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* Titre = Sora */
+.process-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 2rem;
+  color: #1e2a38;
+  margin-bottom: 40px;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.step-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Titre dans les cartes = Sora */
+.step-card h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.3rem;
+  color: #1e2a38;
+  margin-bottom: 10px;
+}
+
+/* Texte dans les cartes = Manrope */
+.step-card p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Animation fade-in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .process-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+}
