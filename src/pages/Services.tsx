@@ -16,7 +16,7 @@ const sectionVariants = {
     transition: {
       staggerChildren: 0.2,
       delayChildren: 0.1
-    }
+    } 
   }
 };
 
