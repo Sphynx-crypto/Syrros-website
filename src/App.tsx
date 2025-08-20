@@ -58,6 +58,7 @@ function App() {
         <main>
            <ScrollToTop />
           <Routes>
+             <Route index element={<Home />} />
             <Route path="/articles" element={<Articles />} />
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
