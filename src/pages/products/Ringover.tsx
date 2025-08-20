@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import CallToActionBlock from "../../components/CallToActionBlock";
 import { ArrowLeft } from "lucide-react";
+import ringoverLogo from "../../assets/logos/Ringover.png";
 import {useEffect} from "react" 
 const Ringover = () => { 
   const location = useLocation();
@@ -24,7 +25,7 @@ const Ringover = () => {
         <div className="px-16 py-12">
         {/* Titre et logo */}
         <div className="flex items-center gap-6 mb-10">
-          <img src="/src/assets/logos/Ringover.png" alt="Ringover" className="w-20 h-20 rounded-xl shadow-md" />
+          <img src={ringoverLogo} alt="Ringover" className="w-20 h-20 rounded-xl shadow-md" />
           <h1 className="text-4xl font-sora font-bold">Ringover</h1>
         </div>
 
