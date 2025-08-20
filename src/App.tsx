@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import BookAppointment from './pages/BookAppointment';
-import About from './pages/About';
-import Testimonials from './pages/Testimonials';
-import Contact from './pages/Contact';
-import Legal from './pages/Legal';
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Layout from "./components/Layout";
+
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import BookAppointment from "./pages/BookAppointment";
+import About from "./pages/About";
+import Testimonials from "./pages/Testimonials";
+import Contact from "./pages/Contact";
+import Legal from "./pages/Legal";
+import Articles from "./pages/Articles";
+
+// ⚠️ Composants produits : nom en PascalCase
 import OpenAI from "./pages/products/OpenAI";
-import n8n from "./pages/products/n8n";
+import N8n from "./pages/products/n8n";
 import NotebookLM from "./pages/products/NotebookLM";
 import Notion from "./pages/products/Notion";
 import Pandadoc from "./pages/products/Pandadoc";
@@ -45,69 +48,67 @@ import Llama from "./pages/products/Llama";
 import Sellsy from "./pages/products/Sellsy";
 import LookerStudio from "./pages/products/LookerStudio";
 import MODULR from "./pages/products/MODULR";
-import ScrollToTop from "./components/ScrollToTop"
-import Articles from "./pages/Articles";
-
-
 
 function App() {
   return (
-     <BrowserRouter basename="/Syrros-website">
-      <div className="min-h-screen text-white">
-        <Header />
-        <main>
-           <ScrollToTop />
-          <Routes>
-             <Route index element={<Home />} />
-            <Route path="/articles" element={<Articles />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/rendez-vous" element={<BookAppointment />} />
-            <Route path="/a-propos" element={<About />} />
-            <Route path="/témoignages" element={<Testimonials />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/mentions-legales" element={<Legal />} />
-            <Route path="/openai" element={<OpenAI />} />
-            <Route path="/n8n" element={<n8n />} />
-            <Route path="/notebooklm" element={<NotebookLM />} />
-            <Route path="/notion" element={<Notion />} />
-            <Route path="/pandadoc" element={<Pandadoc />} />
-            <Route path="/pennylane" element={<Pennylane />} />
-            <Route path="/powerbi" element={<PowerBI />} />
-            <Route path="/pytorch" element={<Pytorch />} />
-            <Route path="/qonto" element={<Qonto />} />
-            <Route path="/retool" element={<Retool />} />
-            <Route path="/ringover" element={<Ringover />} />
-            <Route path="/slack" element={<Slack />} />
-            <Route path="/softr" element={<Softr />} />
-            <Route path="/supabase" element={<Supabase />} />
-            <Route path="/tableau" element={<Tableau />} />
-            <Route path="/weweb" element={<Weweb />} />
-            <Route path="/whalesync" element={<Whalesync />} />
-            <Route path="/zendesk" element={<Zendesk />} />
-            <Route path="/airbyte" element={<Airbyte />} />
-            <Route path="/airtable" element={<Airtable />} />
-            <Route path="/anthropic" element={<Anthropic />} />
-            <Route path="/bigquery" element={<BigQuery />} />
-            <Route path="/dbt" element={<DBT />} />
-            <Route path="/dust" element={<Dust />} />
-            <Route path="/fivetran" element={<Fivetran />} />
-            <Route path="/googledrive" element={<GoogleDrive />} />
-            <Route path="/hubspot" element={<Hubspot />} />
-            <Route path="/jotform" element={<Jotform />} />
-            <Route path="/klaviyo" element={<Klaviyo />} />
-            <Route path="/langchain" element={<LangChain />} />
-            <Route path="/leadbay" element={<Leadbay />} />
-            <Route path="/leexi" element={<Leexi />} />
-            <Route path="/llama" element={<Llama />} />
-            <Route path="/sellsy" element={<Sellsy />} />
-            <Route path="/lookerstudio" element={<LookerStudio />} />
-            <Route path="/modulr" element={<MODULR />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+    <BrowserRouter basename="/Syrros-website">
+      <Routes>
+        {/* Parent avec layout + Outlet */}
+        <Route path="/" element={<Layout />}>
+          {/* Accueil */}
+          <Route index element={<Home />} />
+
+          {/* Enfants : chemins SANS slash initial */}
+          <Route path="articles" element={<Articles />} />
+          <Route path="services" element={<Services />} />
+          <Route path="rendez-vous" element={<BookAppointment />} />
+          <Route path="a-propos" element={<About />} />
+          <Route path="temoignages" element={<Testimonials />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="mentions-legales" element={<Legal />} />
+
+          {/* Produits */}
+          <Route path="openai" element={<OpenAI />} />
+          <Route path="n8n" element={<N8n />} />
+          <Route path="notebooklm" element={<NotebookLM />} />
+          <Route path="notion" element={<Notion />} />
+          <Route path="pandadoc" element={<Pandadoc />} />
+          <Route path="pennylane" element={<Pennylane />} />
+          <Route path="powerbi" element={<PowerBI />} />
+          <Route path="pytorch" element={<Pytorch />} />
+          <Route path="qonto" element={<Qonto />} />
+          <Route path="retool" element={<Retool />} />
+          <Route path="ringover" element={<Ringover />} />
+          <Route path="slack" element={<Slack />} />
+          <Route path="softr" element={<Softr />} />
+          <Route path="supabase" element={<Supabase />} />
+          <Route path="tableau" element={<Tableau />} />
+          <Route path="weweb" element={<Weweb />} />
+          <Route path="whalesync" element={<Whalesync />} />
+          <Route path="zendesk" element={<Zendesk />} />
+          <Route path="airbyte" element={<Airbyte />} />
+          <Route path="airtable" element={<Airtable />} />
+          <Route path="anthropic" element={<Anthropic />} />
+          <Route path="bigquery" element={<BigQuery />} />
+          <Route path="dbt" element={<DBT />} />
+          <Route path="dust" element={<Dust />} />
+          <Route path="fivetran" element={<Fivetran />} />
+          <Route path="googledrive" element={<GoogleDrive />} />
+          <Route path="hubspot" element={<Hubspot />} />
+          <Route path="jotform" element={<Jotform />} />
+          <Route path="klaviyo" element={<Klaviyo />} />
+          <Route path="langchain" element={<LangChain />} />
+          <Route path="leadbay" element={<Leadbay />} />
+          <Route path="leexi" element={<Leexi />} />
+          <Route path="llama" element={<Llama />} />
+          <Route path="sellsy" element={<Sellsy />} />
+          <Route path="lookerstudio" element={<LookerStudio />} />
+          <Route path="modulr" element={<MODULR />} />
+
+          {/* Catch-all → accueil du parent */}
+          <Route path="*" element={<Navigate to="." replace />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }
