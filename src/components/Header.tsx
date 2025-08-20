@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Bot } from 'lucide-react';
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-
+import syrrosLogo from "../../assets/logos/Syrros.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -26,7 +26,7 @@ const Header = () => {
         <Link to="/" className="flex items-center space-x-2 text-xl font-bold text-white">
           
  
-  <img src="../src/assets/logos/Syrros.png" alt="Syrros" className="h-[70px] w-auto translate-y-[3px]" />
+  <img src={syrrosLogo} alt="Syrros" className="h-[70px] w-auto translate-y-[3px]" />
           <span className="hidden md:block text-2x1 font-bold font-sora bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
           SYRROS
           </span>
