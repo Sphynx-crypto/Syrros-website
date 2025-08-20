@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import CallToActionBlock from "../../components/CallToActionBlock";
 import { ArrowLeft } from "lucide-react";
-import retoolLogo from "../../assets/logos/retool.png";
+import retoolLogo from "../../assets/logos/Retool.png";
 import {useEffect} from "react" 
 const Retool = () => { 
   const location = useLocation();
