@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Bot } from 'lucide-react';
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import syrrosLogo from "../../assets/logos/Syrros.png";
+import syrrosLogo from "../../assets/logos/Syrros.png"; 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
