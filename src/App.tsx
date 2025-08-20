@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -52,7 +52,7 @@ import Articles from "./pages/Articles";
 
 function App() {
   return (
-    <Router>
+     <BrowserRouter basename="/Syrros-website">
       <div className="min-h-screen text-white">
         <Header />
         <main>
@@ -102,11 +102,12 @@ function App() {
             <Route path="/sellsy" element={<Sellsy />} />
             <Route path="/lookerstudio" element={<LookerStudio />} />
             <Route path="/modulr" element={<MODULR />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
         <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
