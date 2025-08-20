@@ -859,39 +859,7 @@ const allDone = titlesDone === total && descsDone === total && listsDone === tot
           </div>
         </div>
       </section>
-      {/* FAQ */}
-      <section className="py-16 ">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-sora font-semibold text-white mb-4">
-              Questions Fréquentes
-            </h2>
-          </div>
-          
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-800 rounded-lg">
-                <button
-                  onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700 transition-colors"
-                >
-                  <span className="font-sora text-white font-medium">{faq.question}</span>
-                  {expandedFaq === index ? (
-                    <ChevronUp className="h-5 w-5 text-gray-400" />
-                  ) : (
-                    <ChevronDown className="h-5 w-5 text-gray-400" />
-                  )}
-                </button>
-                {expandedFaq === index && (
-                  <div className="px-6 pb-4">
-                    <p className="font-manrope text-gray-300">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* CTA Section */}
       <section className ="pb-16 home-background">
