@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bot, Mail, Linkedin } from 'lucide-react';
-
+ 
 const Footer = () => {
   return (
     <footer className="bg-[#121212]">
