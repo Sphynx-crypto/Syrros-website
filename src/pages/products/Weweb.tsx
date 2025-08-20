@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import CallToActionBlock from "../../components/CallToActionBlock";
 import { ArrowLeft } from "lucide-react";
+import wewebLogo from "../../assets/logos/Weweb.png";
 import {useEffect} from "react" 
 const Weweb = () => { 
   const location = useLocation();
@@ -24,7 +25,7 @@ const Weweb = () => {
         <div className="px-16 py-12">
         {/* Titre et logo */}
         <div className="flex items-center gap-6 mb-10">
-          <img src="/src/assets/logos/Weweb.png" alt="Weweb" className="w-20 h-20 rounded-xl shadow-md" />
+          <img src={wewebLogo} alt="Weweb" className="w-20 h-20 rounded-xl shadow-md" />
           <h1 className="text-4xl font-sora font-bold">Weweb</h1>
         </div>
 
