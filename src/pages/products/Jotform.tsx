@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import CallToActionBlock from "../../components/CallToActionBlock";
 import { ArrowLeft } from "lucide-react";
-import jotformLogo from "../../assets/logos/Jotform.png";
+import jotformLogo from "../../assets/logos/jotform.png";
 import {useEffect} from "react" 
 const Jotform = () => { 
   const location = useLocation();
