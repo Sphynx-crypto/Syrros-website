@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import CallToActionBlock from "../../components/CallToActionBlock";
 import { ArrowLeft } from "lucide-react";
+import jotformLogo from "../../assets/logos/Jotform.png";
 import {useEffect} from "react" 
 const Jotform = () => { 
   const location = useLocation();
@@ -24,7 +25,7 @@ const Jotform = () => {
         <div className="px-16 py-12">
         {/* Titre et logo */}
         <div className="flex items-center gap-6 mb-10">
-          <img src="/src/assets/logos/jotform.png" alt="Jotform" className="w-20 h-20 rounded-xl shadow-md" />
+          <img src={jotformLogo} alt="Jotform" className="w-20 h-20 rounded-xl shadow-md" />
           <h1 className="text-4xl font-sora font-bold">Jotform</h1>
         </div>
 
