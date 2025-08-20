@@ -20,7 +20,7 @@ const Footer = () => {
         <Link to="/" className="flex items-center space-x-2 text-xl font-bold text-white">
           
  
-  <img src="../src/assets/logos/Syrros.png" alt="Syrros" className="h-[90px] w-auto translate-y-[3px]" />
+  <img src={syrrosLogo} alt="Syrros" className="h-[90px] w-auto translate-y-[3px]" />
           <span className="text-2x1 font-bold font-sora bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
           SYRROS
           </span> 
