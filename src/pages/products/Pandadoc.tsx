@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import CallToActionBlock from "../../components/CallToActionBlock";
 import { ArrowLeft } from "lucide-react";
+import pandadocLogo from "../../assets/logos/pandadoc.png";
 import {useEffect} from "react" 
 const Pandadoc = () => { 
   const location = useLocation();
@@ -24,7 +25,7 @@ const Pandadoc = () => {
         <div className="px-16 py-12">
         {/* Titre et logo */}
         <div className="flex items-center gap-6 mb-10">
-          <img src="/src/assets/logos/pandadoc.png" alt="Pandadoc" className="w-20 h-20 rounded-xl shadow-md" />
+          <img src={pandadocLogo} alt="Pandadoc" className="w-20 h-20 rounded-xl shadow-md" />
           <h1 className="text-4xl font-sora font-bold">Pandadoc</h1>
         </div>
 
