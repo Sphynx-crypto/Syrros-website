@@ -390,7 +390,7 @@ const loadMore = () => {
     {
       title: "Airbyte",
       description: "Plateforme d'intégration et synchronisation de données.",
-      image: "/src/assets/logos/airbyte.png",
+      image: logo("airbyte.png"),
       route: "/airbyte",
     },
     {
