@@ -384,7 +384,7 @@ const loadMore = () => {
     {
       title: "Zendesk",
       description: "Plateforme de service client et support.",
-      image: logo("Zendesk.png"),
+      image: logo("Zendesk.png"), 
       route: "/zendesk",
     },
     {
