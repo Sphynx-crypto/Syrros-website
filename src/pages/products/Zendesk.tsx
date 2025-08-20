@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import CallToActionBlock from "../../components/CallToActionBlock";
 import { ArrowLeft } from "lucide-react";
+import zendeskLogo from "../../assets/logos/Zendesk.png";
 import {useEffect} from "react" 
 const Zendesk = () => { 
   const location = useLocation();
@@ -24,7 +25,7 @@ const Zendesk = () => {
         <div className="px-16 py-12">
         {/* Titre et logo */}
         <div className="flex items-center gap-6 mb-10">
-          <img src="/src/assets/logos/Zendesk.png" alt="Zendesk" className="w-20 h-20 rounded-xl shadow-md" />
+         <img src={zendeskLogo} alt="Zendesk" className="w-20 h-20 rounded-xl shadow-md" />
           <h1 className="text-4xl font-sora font-bold">Zendesk</h1>
         </div>
 
