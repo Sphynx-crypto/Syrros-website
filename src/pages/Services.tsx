@@ -515,7 +515,7 @@ const loadMore = () => {
       icon: <Brain className="w-6 h-6 text-purple-600" />,
       title: " L’apprentissage supervisé",
       content: [
-        "Chaque fois qu’un conseiller humain corrige ou complète une réponse, cette nouvelle information est immédiatement intégrée par l’agent. L’IA enregistre la solution validée et enrichit automatiquement sa base de connaissances, créant ainsi un cercle vertueux d’amélioration continue. Au fil des interactions, l’agent apprend de ses ajustements, gagne en précision et en autonomie, jusqu’à être capable de fournir lui-même, à l’avenir, la bonne réponse sans intervention humaine.",
+        "Chaque fois qu’un conseiller humain corrige ou complète une réponse, cette nouvelle information est immédiatement intégrée par l’agent. L’IA enregistre la solution validée et enrichit automatiquement sa base de connaissances, créant ainsi un cercle vertueux d’amélioration continue. Au fil des interactions, l’agent apprend de ses ajustements, gagne en précision et en autonomie, jusqu’à être capable de fournir lui-même, à l’avenir, la bonne réponse sans intervention humaine.", 
       ],
     },
     {
