@@ -522,9 +522,7 @@ const loadMore = () => {
       icon: <DollarSign className="w-6 h-6 text-yellow-600" />,
       title: " Un avantage économique décisif",
       content: [
-        "Un salarié humain : limité par son temps de travail, coûteux à l’échelle.",
-        "Un agent IA : disponible en continu, scalable à des milliers de conversations simultanées.",
-        " Chaque correction humaine est un investissement unique qui génère des économies à long terme.",
+        "Un salarié dédié au support client représente en moyenne un coût d’environ 2 800 € par mois, pour environ 140 heures de travail effectif, soit près de 20 € par heure. En comparaison, un agent IA peut répondre à vos clients sans interruption, 24h/24 et 7j/7. Chaque interaction coûte environ 0,005 €, ce qui signifie que 1 000 demandes clients ne reviennent qu’à 5 €. Ainsi, alors qu’un salarié ne peut traiter qu’un nombre limité de requêtes, l’IA est capable de gérer un volume quasi illimité, instantanément et à une fraction du coût.",
       ],
     },
     {
