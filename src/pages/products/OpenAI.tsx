@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import CallToActionBlock from "../../components/CallToActionBlock";
 import { ArrowLeft } from "lucide-react";
+import openaiLogo from "../../assets/logos/OpenAI.png";
 import {useEffect} from "react" 
 const OpenAI = () => { 
   const location = useLocation();
@@ -24,7 +25,7 @@ const OpenAI = () => {
         <div className="px-16 py-12">
         {/* Titre et logo */}
         <div className="flex items-center gap-6 mb-10">
-          <img src="/src/assets/logos/OpenAI.png" alt="OpenAI" className="w-20 h-20 rounded-xl shadow-md" />
+          <img src={openaiLogo} alt="OpenAI" className="w-20 h-20 rounded-xl shadow-md" />
           <h1 className="text-4xl font-sora font-bold">OpenAI - ChatGPT</h1>
         </div>
 
