@@ -6,6 +6,14 @@ import CallToActionBlock from "../components/CallToActionBlock";
 import { ChevronDoubleRightIcon } from "@heroicons/react/24/solid";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { motion, useInView } from "framer-motion";
+// Charge automatiquement tous les logos et renvoie l’URL finale
+const logos = import.meta.glob("../assets/logos/*.{png,jpg,svg}", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
+
+// utilitaire pour récupérer un logo par nom de fichier
+const logo = (name: string) => logos[`../assets/logos/${name}`];
   {/*ecriture automatique*/}
 
 // Animation variants for Framer Motion
