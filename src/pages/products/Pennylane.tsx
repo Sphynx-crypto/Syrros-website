@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import CallToActionBlock from "../../components/CallToActionBlock";
 import { ArrowLeft } from "lucide-react";
+import pennylaneLogo from "../../assets/logos/pennylane.png";
 import {useEffect} from "react" 
 const Pennylane = () => { 
   const location = useLocation();
@@ -24,7 +25,8 @@ const Pennylane = () => {
         <div className="px-16 py-12">
         {/* Titre et logo */}
         <div className="flex items-center gap-6 mb-10">
-          <img src="/src/assets/logos/pennylane.png" alt="Pennylane" className="w-20 h-20 rounded-xl shadow-md" />
+         <img src={pennylaneLogo} alt="Pennylane" className="w-20 h-20 rounded-xl shadow-md" />
+
           <h1 className="text-4xl font-sora font-bold">Pennylane</h1>
         </div>
 
