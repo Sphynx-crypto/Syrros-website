@@ -304,6 +304,12 @@ const loadMore = () => {
       route: "/n8n",
     },
     {
+      title: "Supabase",
+      description: "Backend-as-a-Service avec base de données PostgreSQL.",
+      image: logo("supabase.png"),
+      route: "/supabase",
+    },
+    {
       title: "NotebookLM",
       description: "Assistant IA pour la recherche et l'analyse de documents.",
       image: logo("notebooklm.png"),
@@ -357,12 +363,7 @@ const loadMore = () => {
       image: logo("slack.png"),
       route: "/slack",
     },
-    {
-      title: "Supabase",
-      description: "Backend-as-a-Service avec base de données PostgreSQL.",
-      image: logo("supabase.png"),
-      route: "/supabase",
-    },
+    
     {
       title: "Tableau",
       description: "Plateforme de visualisation et analyse de données.",
