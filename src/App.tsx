@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
 
 import Home from "./pages/Home";
@@ -51,7 +51,6 @@ import MODULR from "./pages/products/MODULR";
 
 function App() {
   return (
-    <BrowserRouter basename>
       <Routes>
         {/* Parent avec layout + Outlet */}
         <Route path="/" element={<Layout />}>
@@ -109,7 +108,6 @@ function App() {
           <Route path="*" element={<Navigate to="." replace />} />
         </Route>
       </Routes>
-    </BrowserRouter>
   );
 }
 
