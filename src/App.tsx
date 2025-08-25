@@ -51,7 +51,7 @@ import MODULR from "./pages/products/MODULR";
 
 function App() {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename>
       <Routes>
         {/* Parent avec layout + Outlet */}
         <Route path="/" element={<Layout />}>
